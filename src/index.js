@@ -4,4 +4,4 @@ import "./style.footer.css";
 import "./style.carousel.css";
 import "./style.topic.css";
 import "./style.word.css";
-import "./modules/main.js";
+import "./modules/home/main.js";
