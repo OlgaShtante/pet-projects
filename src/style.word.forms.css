@@ -1,0 +1,85 @@
+.switchLanguageText {
+}
+
+.switchLanguageBtn {
+  margin-left: 20px;
+}
+
+.switchLanguage {
+  padding: 30px;
+  text-align: right;
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  width: 50%;
+}
+
+.shortDescription {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container {
+  width: 100%;
+  padding: 30px;
+  background: white;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+.container .links {
+  text-align: center;
+  font-size: 15px;
+}
+
+.container .links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  color: darkgrey;
+  font-family: sans-serif;
+  margin: 20px;
+  line-height: 35px;
+  text-shadow: 1px 1px 2px rgb(107, 106, 106);
+  font: bold;
+  font-size: 22px;
+}
+
+.container .links a.selected {
+  color: #5ec7d4;
+  text-shadow: 1px 1px 2px grey;
+  font: bold;
+  font-size: 26px;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkForm {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.tabTitle {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  padding: 5px;
+}
+
+::placeholder {
+  color: darkcyan;
+}
+
+button {
+  padding: 5px;
+}
