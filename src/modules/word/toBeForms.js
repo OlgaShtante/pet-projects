@@ -10,7 +10,6 @@ tabs.init("present");
 //Each button has own function on the page
 function ClickButtons(el) {
   this.checkPresentPositive = function() {
-    // debugger;
     checkValue(toBePresentPositive);
   };
   this.tryAgain = function() {
@@ -129,7 +128,6 @@ function showError(inputParam) {
 function renderInput() {
   let removeDiv = this.parentElement;
   removeDiv.remove();
-  debugger;
   const container = document.getElementById("column1");
   const input = document.createElement("input");
   container.appendChild(input);
