@@ -64,7 +64,6 @@ td {
 
 .checkForm {
   padding-left: 20px;
-  padding-top: 10px;
 }
 
 .tabTitle {
@@ -74,6 +73,7 @@ td {
 
 input {
   padding: 5px;
+  margin-bottom: 10px;
 }
 
 ::placeholder {
@@ -82,4 +82,28 @@ input {
 
 button {
   padding: 5px;
+}
+
+.success {
+  padding: 20px;
+  background-color: #dcf394;
+  color: rgb(63, 121, 63);
+  text-shadow: 1px 1px 2px grey;
+  width: 380px;
+  margin: auto;
+  border: forestgreen 2px solid;
+  box-shadow: 1px 1px 2px lightgrey;
+}
+
+.successButton {
+  margin-left: 40px;
+  padding: 10px;
+  background-color: #d3e993;
+  border: rgb(63, 121, 63) 2px solid;
+  color: rgb(63, 121, 63);
+  font: bold;
+}
+
+.marg {
+  margin: 10px;
 }
