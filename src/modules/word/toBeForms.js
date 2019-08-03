@@ -1,6 +1,11 @@
 import { TenseTabs } from "./tenseTabs.js";
-// import { AllTense } from "./toBeAllTense.js"; - //module with data
-// const allTense = new AllTense();
+import { ToBeFormsPresent } from "./toBePresentTense.sevice.js";
+import { ToBeFormsPast } from "./toBePastTense.service.js";
+import { ToBeFormsFuture } from "./toBeFutureTense.service.js";
+
+const getPresentToBeForms = new ToBeFormsPresent();
+const getPastToBeForms = new ToBeFormsPast();
+const getFutureToBeForms = new ToBeFormsFuture();
 
 //One tab is opened by default:
 
