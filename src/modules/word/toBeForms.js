@@ -13,12 +13,12 @@ const tabs = new TenseTabs();
 tabs.init("present");
 
 //Each button has own function on the page
-function ClickButtons(el) {
+function ClickButtons(elements) {
   this.checkPresentPositive = function() {
     checkValue(toBePresentPositive);
   };
-  this.tryAgain = function() {
-    renderInput();
+  this.tryAgain = function(parameter) {
+    showInputAndButton(parameter);
   };
   // this.checkPresentNegative = function() {
   //   checkValue(toBePresentNegative);
@@ -45,7 +45,7 @@ function ClickButtons(el) {
 
   const self = this;
 
-  el.onclick = element => {
+  elements.onclick = element => {
     const target = element.target;
     const action = target.getAttribute("data-action");
     if (action) {
@@ -70,23 +70,20 @@ const toBePresentPositive = [
   "Oni/One so"
 ];
 
-function checkValue(arrayParam) {
-  let i = 0,
-    j = 0;
-
-  for (i = 0; i < inputs.length; i++) {
-    if (inputs[i].value !== "") {
-      const input = inputs[i].value;
-
-      for (j = 0; j < arrayParam.length; j++) {
+function checkValue() {
+  for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i].value;
+    if (input !== "") {
+      for (let j = 0; j < toBePresentPositive.length; j++) {
         const placeholder = inputs[i].placeholder;
-        if (arrayParam.includes(`${placeholder} ${input}`)) {
+        if (toBePresentPositive.includes(`${placeholder} ${input}`)) {
           const parameter = `${placeholder} ${input}`;
-          removeInputAndButton();
-          createSuccessMessage(parameter);
+          hideInputandButton();
+          showSuccessMessage(parameter);
           break;
         } else {
           showError(inputs[i]);
+          inputs[i].value = "";
           break;
         }
       }
@@ -94,54 +91,52 @@ function checkValue(arrayParam) {
   }
 }
 
-function removeInputAndButton() {
-  const divToRemove = document.querySelector(".checkForm");
-  divToRemove.remove();
+function hideInputandButton() {
+  const clickedCheckBtn = event.target;
+  const divOfCheckBtn = clickedCheckBtn.parentNode;
+  divOfCheckBtn.style.display = "none";
 }
 
-function createSuccessMessage(parameter) {
-  const divMarg = document.createElement("div");
-  divMarg.classList.add("marg");
-  const divchik = document.createElement("div");
-  divchik.innerHTML = `" ${parameter} " - to je pravilno!`;
-  divchik.classList.add("success");
-  divchik.style.textAlign = "center";
-  const container = document.getElementById("column1");
-  container.appendChild(divMarg);
-  divMarg.appendChild(divchik);
+function showSuccessMessage(parameter) {
+  const spans = document.querySelectorAll(".successText");
+  for (let i = 0; i < spans.length; i++) {
+    const span = spans[i].childNodes[i].nodeValue;
+    const spanText = span.substring(17, span.length - 1);
+    if (parameter === spanText) {
+      const divOfSpan = spans[i].parentNode;
+      divOfSpan.classList.remove("hidden");
+      break;
+    }
+  }
+}
 
-  const btn = document.createElement("button");
-  btn.innerHTML = "Še enkrat!";
-  btn.classList.add("successButton");
-  btn.addEventListener("click", renderInput);
-  btn.setAttribute("data-action", "tryAgain");
-  divchik.appendChild(btn);
+function showInputAndButton() {
+  const clickedTryAgainBtn = event.target;
+  const divOfTryAgainBtn = clickedTryAgainBtn.parentNode;
+  divOfTryAgainBtn.classList.add("hidden");
+  const elementsOfDiv = divOfTryAgainBtn.children;
+  const currentSpan = elementsOfDiv[0].childNodes[0].nodeValue;
+  const currentSpanText = currentSpan.substring(17, currentSpan.length - 1);
+  const currentPlaceholder = currentSpanText.split(" ")[0];
+  for (let i = 0; i < inputs.length; i++) {
+    if (currentPlaceholder === inputs[i].placeholder) {
+      const divOfInput = inputs[i].parentNode;
+      divOfInput.style.display = "block";
+      inputs[i].value = "";
+      break;
+    }
+  }
 }
 
 function showError(inputParam) {
-  inputParam.style.borderColor = "red";
-  const message = document.createElement("span");
+  inputParam.style.borderColor = "#ff4d4d";
+  const message = document.createElement("div");
   message.innerText = "Še enkrat premisli!";
-  message.style.color = "red";
+  message.classList.add("error");
   const divWithError = document.querySelector(".tabTitle");
   divWithError.appendChild(message);
+  let timeoutID;
   timeoutID = setTimeout(() => {
     message.remove();
-  }, 2000);
-}
-
-function renderInput() {
-  let removeDiv = this.parentElement;
-  removeDiv.remove();
-  const container = document.getElementById("column1");
-  const input = document.createElement("input");
-  container.appendChild(input);
-  const button = document.createElement("button");
-  button.innerHTML = "Preveri!";
-  container.appendChild(button);
-  getPlaceholder();
-}
-
-function getPlaceholder(parameter) {
-  // to be realized;
+  }, 1500);
 }

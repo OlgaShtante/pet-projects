@@ -1,13 +1,19 @@
 .switchLanguageText {
 }
 
-.switchLanguageBtn {
-  margin-left: 20px;
-}
-
 .switchLanguage {
   padding: 30px;
   text-align: right;
+}
+
+.switchLanguage button {
+  width: 60px;
+  font-size: 16px;
+  color: grey;
+  background-color: #fff;
+  text-shadow: 1px 1px 2px rgb(229, 229, 229);
+  border: lightgrey 2px solid;
+  box-shadow: 1px 1px 3px rgb(229, 229, 229);
 }
 
 table {
@@ -33,7 +39,7 @@ td {
   border-radius: 8px;
 }
 
-.container .links {
+.links {
   text-align: center;
   font-size: 15px;
 }
@@ -62,48 +68,83 @@ td {
   display: none;
 }
 
-.checkForm {
-  padding-left: 20px;
-}
-
 .tabTitle {
   margin-top: 30px;
   text-align: center;
 }
 
 input {
-  padding: 5px;
-  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  width: 270px;
+  border: grey 2px solid;
+  box-shadow: 1px 1px 2px lightgrey;
 }
 
 ::placeholder {
   color: darkcyan;
+  font-size: 16px;
 }
 
 button {
-  padding: 5px;
-}
-
-.success {
-  padding: 20px;
-  background-color: #dcf394;
-  color: rgb(63, 121, 63);
-  text-shadow: 1px 1px 2px grey;
-  width: 380px;
-  margin: auto;
-  border: forestgreen 2px solid;
-  box-shadow: 1px 1px 2px lightgrey;
-}
-
-.successButton {
-  margin-left: 40px;
   padding: 10px;
-  background-color: #d3e993;
-  border: rgb(63, 121, 63) 2px solid;
-  color: rgb(63, 121, 63);
+  margin-left: 30px;
+  color: rgb(27, 46, 46);
+  font-size: 16px;
   font: bold;
 }
 
-.marg {
-  margin: 10px;
+.allDivs div {
+  margin: auto;
+  margin-bottom: 2px;
+  width: 450px;
+  padding: 20px;
+  text-align: left;
+}
+
+.checkForm {
+  background-color: whitesmoke;
+  border: darkcyan 2px solid;
+}
+
+.checkForm button {
+  width: 100px;
+  background-color: whitesmoke;
+  background-color: #5ec7d4;
+  text-shadow: 0.5px 0.5px 0.5px #077483;
+  border: #388b95 2px solid;
+  box-shadow: 1px 1px 3px #358089;
+  border-radius: 4px;
+}
+
+.successMessage {
+  border: green 2px solid;
+  background-color: #c4e75c;
+}
+
+.successMessage button {
+  width: 100px;
+  background-color: #8cd12d;
+  text-shadow: 0.5px 0.5px 0.5px rgb(48, 141, 77);
+  border: forestgreen 2px solid;
+  box-shadow: 1px 1px 3px rgb(136, 136, 136);
+  border-radius: 4px;
+}
+
+.successText {
+  display: inline-block;
+  width: 280px;
+  padding: 8px;
+  background-color: #dcf394;
+  text-align: center;
+  color: forestgreen;
+  text-shadow: 0.5px 0.5px 1px rgb(125, 224, 68);
+  border: forestgreen 2px solid;
+  box-shadow: 1px 1px 3px #96b242;
+}
+
+.error {
+  margin: 20px;
+  color: #f53c3c;
+  text-shadow: 0.5px 0.5px 1px #ff4d4d;
 }
