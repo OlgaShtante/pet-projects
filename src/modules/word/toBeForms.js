@@ -1,11 +1,18 @@
 import { TenseTabs } from "./tenseTabs.js";
 import { ToBeFormsPresent } from "./toBePresentTense.sevice.js";
-import { ToBeFormsPast } from "./toBePastTense.service.js";
-import { ToBeFormsFuture } from "./toBeFutureTense.service.js";
+// import { ToBeFormsPast } from "./toBePastTense.service.js";
+// import { ToBeFormsFuture } from "./toBeFutureTense.service.js";
 
 const getPresentToBeForms = new ToBeFormsPresent();
-const getPastToBeForms = new ToBeFormsPast();
-const getFutureToBeForms = new ToBeFormsFuture();
+// const getPastToBeForms = new ToBeFormsPast();
+// const getFutureToBeForms = new ToBeFormsFuture();
+
+let tenseArray;
+
+export function getPresentData(data) {
+  tenseArray = data.affirmative;
+  checkValue(tenseArray);
+}
 
 //One tab is opened by default:
 
@@ -15,7 +22,7 @@ tabs.init("present");
 //Each button has own function on the page
 function ClickButtons(elements) {
   this.checkPresentPositive = function() {
-    checkValue(toBePresentPositive);
+    checkValue(tenseArray);
   };
   this.tryAgain = function(parameter) {
     showInputAndButton(parameter);
@@ -58,25 +65,13 @@ new ClickButtons(allButtons); //allButtons is body's  id to make all buttons of 
 
 const inputs = document.getElementsByTagName("input");
 
-const toBePresentPositive = [
-  "Jaz sem",
-  "Ti si",
-  "On/Ona/Ono je",
-  "Midva/Midve sva",
-  "Vidva/Vidve sta",
-  "Onadva/Onidve sta",
-  "Mi/Me smo",
-  "Vi/Ve ste",
-  "Oni/One so"
-];
-
-function checkValue() {
+function checkValue(tenseArray) {
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i].value;
     if (input !== "") {
-      for (let j = 0; j < toBePresentPositive.length; j++) {
+      for (let j = 0; j < tenseArray.length; j++) {
         const placeholder = inputs[i].placeholder;
-        if (toBePresentPositive.includes(`${placeholder} ${input}`)) {
+        if (tenseArray.includes(`${placeholder} ${input}`)) {
           const parameter = `${placeholder} ${input}`;
           hideInputandButton();
           showSuccessMessage(parameter);

@@ -1,3 +1,5 @@
+import { getPresentData } from "./toBeForms.js";
+
 function ToBeFormsPresent() {
   const url = "https://db-json-to-be-forms.herokuapp.com/posts/1";
 
@@ -16,7 +18,9 @@ function ToBeFormsPresent() {
       console.log(e.response);
     })
     .then(response => response.json())
-    .then(data => console.log(data.affirmative, data.negative));
+    .then(data => {
+      getPresentData(data);
+    });
 }
 
 export { ToBeFormsPresent };
