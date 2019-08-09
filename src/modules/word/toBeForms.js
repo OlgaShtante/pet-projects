@@ -88,9 +88,10 @@ function hideInputandButton() {
 }
 
 function showSuccessMessage(parameter) {
-  const spans = document.querySelectorAll(".successText");
+  const allSpans = document.querySelectorAll(".successText");
+  const spans = Array.prototype.slice.call(allSpans);
   for (let i = 0; i < spans.length; i++) {
-    const span = spans[i].childNodes[i].nodeValue;
+    const span = spans[i].textContent;
     const spanText = span.substring(17, span.length - 1);
     if (parameter === spanText) {
       const divOfSpan = spans[i].parentNode;
