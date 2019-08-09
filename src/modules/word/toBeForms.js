@@ -114,6 +114,7 @@ function showInputAndButton() {
       const divOfInput = inputs[i].parentNode;
       divOfInput.style.display = "block";
       inputs[i].value = "";
+      inputs[i].style.borderColor = "";
       break;
     }
   }
