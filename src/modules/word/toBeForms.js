@@ -1,18 +1,13 @@
 import { TenseTabs } from "./tenseTabs.js";
-import { ToBeFormsPresent } from "./toBePresentTense.sevice.js";
 // import { ToBeFormsPast } from "./toBePastTense.service.js";
 // import { ToBeFormsFuture } from "./toBeFutureTense.service.js";
+import { ToBeFormsPresent } from "./toBePresentTense.sevice.js";
 
-const getPresentToBeForms = new ToBeFormsPresent();
-// const getPastToBeForms = new ToBeFormsPast();
-// const getFutureToBeForms = new ToBeFormsFuture();
+const toBePresentTense = new ToBeFormsPresent();
+// const toBePastTense = new ToBeFormsPast();
+// const toBeFutureTense = new ToBeFormsFuture();
 
-let tenseArray;
-
-export function getPresentData(data) {
-  tenseArray = data.affirmative;
-  checkValue(tenseArray);
-}
+let arr;
 
 //One tab is opened by default:
 
@@ -22,7 +17,7 @@ tabs.init("present");
 //Each button has own function on the page
 function ClickButtons(elements) {
   this.checkPresentPositive = function() {
-    checkValue(tenseArray);
+    checkValue(arr);
   };
   this.tryAgain = function(parameter) {
     showInputAndButton(parameter);
@@ -31,7 +26,7 @@ function ClickButtons(elements) {
   //   checkValue(toBePresentNegative);
   // };
   // this.checkPastPositive = function() {
-  //   checkValue(toBePastPositive);
+  //   checkValue(arr);
   // };
   // this.checkPastNegative = function() {
   //   checkValue(toBePastNegative);
@@ -65,13 +60,13 @@ new ClickButtons(allButtons); //allButtons is body's  id to make all buttons of 
 
 const inputs = document.getElementsByTagName("input");
 
-function checkValue(tenseArray) {
+function checkValue(arr) {
   for (let i = 0; i < inputs.length; i++) {
     const input = inputs[i].value;
     if (input !== "") {
-      for (let j = 0; j < tenseArray.length; j++) {
+      for (let j = 0; j < arr.length; j++) {
         const placeholder = inputs[i].placeholder;
-        if (tenseArray.includes(`${placeholder} ${input}`)) {
+        if (arr.includes(`${placeholder} ${input}`)) {
           const parameter = `${placeholder} ${input}`;
           hideInputandButton();
           showSuccessMessage(parameter);
@@ -135,3 +130,18 @@ function showError(inputParam) {
     message.remove();
   }, 1500);
 }
+
+export function getPresentData(data) {
+  arr = data.affirmative;
+  checkValue(arr);
+}
+
+// export function getPastData(data) {
+//   arr = data.affirmative;
+//   console.log(arr);
+// }
+
+// export function getFutureData(data) {
+//   arr = data.affirmative;
+//   console.log(arr);
+// }

@@ -1,5 +1,6 @@
+import { getPastData } from "./toBeforms.js";
+
 function ToBeFormsPast() {
-  const data = new Data();
   const url = "https://db-json-to-be-forms.herokuapp.com/posts/2";
 
   function getJSON(url, response) {
@@ -11,20 +12,20 @@ function ToBeFormsPast() {
     request.send();
   }
 
-  function Data() {}
-
-  Data.prototype.getUsefulContents = function(url) {
-    return new Promise(response => {
-      getJSON(url, data => {
-        response(JSON.parse(data));
+  class Data {
+    constructor() {}
+    getUsefulContents(url) {
+      return new Promise(response => {
+        getJSON(url, data => {
+          response(JSON.parse(data));
+        });
       });
-    });
-  };
+    }
+  }
+  const data = new Data();
 
   data.getUsefulContents(url).then(data => {
-    const toBeFormsPositivePastTense = data.affirmative;
-    const toBeFormsNegativePastTense = data.negative;
-    console.log(toBeFormsPositivePastTense, toBeFormsNegativePastTense);
+    getPastData(data);
   });
 }
 export { ToBeFormsPast };

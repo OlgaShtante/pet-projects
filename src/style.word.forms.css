@@ -26,8 +26,13 @@ td {
 }
 
 .shortDescription {
-  margin-left: 20px;
-  margin-right: 20px;
+  font-size: 18px;
+  font: bold;
+  text-align: center;
+  background: rgb(250, 251, 251);
+  color: darkgrey;
+  text-shadow: 0.5px 0.5px 0.5px rgb(121, 118, 118);
+  padding: 20px;
 }
 
 .container {

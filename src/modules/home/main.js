@@ -1,5 +1,5 @@
-import wordCardSlider from "./wordCarousel.js";
-import topicCardSlider from "./topicCarousel.js";
+import topicCardSlider from "./topicCardCarousel.js";
+import wordCardSlider from "./wordCardCarousel.js";
 
 wordCardSlider();
 topicCardSlider();
