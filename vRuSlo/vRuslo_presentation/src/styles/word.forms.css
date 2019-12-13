@@ -1,0 +1,155 @@
+.switchLanguageText {
+}
+
+.switchLanguage {
+  padding: 30px;
+  text-align: right;
+}
+
+.switchLanguage button {
+  width: 60px;
+  font-size: 16px;
+  color: grey;
+  background-color: #fff;
+  text-shadow: 1px 1px 2px rgb(229, 229, 229);
+  border: lightgrey 2px solid;
+  box-shadow: 1px 1px 3px rgb(229, 229, 229);
+}
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  width: 50%;
+}
+
+.shortDescription {
+  font-size: 18px;
+  font: bold;
+  text-align: center;
+  background: rgb(250, 251, 251);
+  color: darkgrey;
+  text-shadow: 0.5px 0.5px 0.5px rgb(121, 118, 118);
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  padding: 30px;
+  background: white;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+.links {
+  text-align: center;
+  font-size: 15px;
+}
+
+.container .links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  color: darkgrey;
+  font-family: sans-serif;
+  margin: 20px;
+  line-height: 35px;
+  text-shadow: 1px 1px 2px rgb(107, 106, 106);
+  font: bold;
+  font-size: 22px;
+}
+
+.container .links a.selected {
+  color: #5ec7d4;
+  text-shadow: 1px 1px 2px grey;
+  font: bold;
+  font-size: 26px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabTitle {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  padding-left: 15px;
+  width: 270px;
+  border: grey 2px solid;
+  box-shadow: 1px 1px 2px lightgrey;
+}
+
+::placeholder {
+  color: darkcyan;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  margin-left: 30px;
+  color: rgb(27, 46, 46);
+  font-size: 16px;
+  font: bold;
+}
+
+.allDivs div {
+  margin: auto;
+  margin-bottom: 2px;
+  width: 450px;
+  padding: 20px;
+  text-align: left;
+}
+
+.checkForm {
+  background-color: whitesmoke;
+  border: darkcyan 2px solid;
+}
+
+.checkForm button {
+  width: 100px;
+  background-color: whitesmoke;
+  background-color: #5ec7d4;
+  text-shadow: 0.5px 0.5px 0.5px #077483;
+  border: #388b95 2px solid;
+  box-shadow: 1px 1px 3px #358089;
+  border-radius: 4px;
+}
+
+.successMessage {
+  border: green 2px solid;
+  background-color: #c4e75c;
+}
+
+.successMessage button {
+  width: 100px;
+  background-color: #8cd12d;
+  text-shadow: 0.5px 0.5px 0.5px rgb(48, 141, 77);
+  border: forestgreen 2px solid;
+  box-shadow: 1px 1px 3px rgb(136, 136, 136);
+  border-radius: 4px;
+}
+
+.successText {
+  display: inline-block;
+  width: 280px;
+  padding: 8px;
+  background-color: #dcf394;
+  text-align: center;
+  color: forestgreen;
+  text-shadow: 0.5px 0.5px 1px rgb(125, 224, 68);
+  border: forestgreen 2px solid;
+  box-shadow: 1px 1px 3px #96b242;
+}
+
+.error {
+  margin: 20px;
+  color: #f53c3c;
+  text-shadow: 0.5px 0.5px 1px #ff4d4d;
+}

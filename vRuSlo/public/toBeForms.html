@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon.ico" />
+    <title>Besedne oblike "biti"</title>
+    <link rel="stylesheet" href="../src/style.main.css" />
+    <link rel="stylesheet" href="../src/style.header.css" />
+    <link rel="stylesheet" href="../src/style.footer.css" />
+    <link rel="stylesheet" href="../src/style.word.forms.css" />
+  </head>
+  <body id="allButtons">
+    <header class="header">
+    <div class="row">
+    <div class="brand left">
+    <h3><a href="index.html">vRUSLO</a></h3></div>
+    <div class="menu">
+    <ul>
+    <li><a href="#">TEME</a></li>
+    <li><a href="#">PRAVILA</a></li>
+    <li><a href="#">IGRE</a></li>
+    </ul>
+    </header>
+ <section>
+        <table>
+                <tr>
+                  <th>
+                    <div class="title">
+                            <span>Besedne oblike</span>
+                            </div>
+                    </th>
+                  <th>
+                        <div class="switchLanguage">
+                                <span class="switchLanguageText">Izberite ruski jezik<span>
+                                  <button data-action="switchTheLanguage">RU</button>
+                          </div>
+                     </div>
+                    </th>
+                </tr>
+              </table>
+<div class="shortDescription">
+    <p>Na prejšnji strani si se naučil(a) vse besedne oblike  in zagotovo si si jih zapomnil(a)! Čas je, da preverimo! V polje vnesi pravilno besedno obliko in klikni "Preveri"! Začnimo! Vso srečo!</p>
+</div>  
+</section>
+ </section>
+ <section  id="inputAreas">
+    <div class="container">
+        <div class="links">
+          <a data-mode="present" class="present selected" href="#">Sedanjost</a>
+          <a data-mode="past" class="past" href="#">Preteklost</a>
+          <a data-mode="future" class="future" href="#">Prihodnost</a>
+        </div>
+        <div class="tabs">
+          <div data-mode="present" class="hidden">
+              <table> 
+                  <tr>
+                    <th id="column1">
+                        <div class="tabTitle"><p>Trdilna poved</p></div>
+                        <div class="allDivs">
+                        
+                        <div class="checkForm">
+                          <input  placeholder="Jaz">
+                          <button data-action="checkPresentPositive">Preveri!</button>
+                          <br>
+                        </div>
+                        <div class="successMessage hidden">
+                          <span class="successText">To je pravilno: "Jaz sem"</span>
+                          <button data-action="tryAgain">Še enkrat!</button> 
+                        </div>
+                         <div class="checkForm">
+                            <input  placeholder="Ti">
+                            <button data-action="checkPresentPositive">Preveri!</button>
+                          </div>
+                          <div class="successMessage hidden">
+                            <span class="successText">To je pravilno: "Ti si"</span>
+                            <button data-action="tryAgain">Še enkrat!</button> 
+                          </div>
+                          <div class="checkForm">
+                              <input placeholder="On/Ona/Ono">
+                              <button data-action="checkPresentPositive">Preveri!</button>
+                            </div>
+                           <div class="successMessage hidden">
+                              <span class="successText">To je pravilno: "On/Ona/Ono je"</span>
+                              <button data-action="tryAgain">Še enkrat!</button> 
+                            </div>
+                            <div class="checkForm">
+                                <input placeholder="Midva/Midve">
+                                <button data-action="checkPresentPositive">Preveri!</button>
+                              </div>
+                             <div class="successMessage hidden">
+                                <span class="successText">To je pravilno: "Midva/Midve sva"</span>
+                                <button data-action="tryAgain">Še enkrat!</button> 
+                              </div>
+                              <div class="checkForm">
+                                  <input placeholder="Vidva/Vidve">
+                                  <button data-action="checkPresentPositive">Preveri!</button>
+                                </div>
+                               <div class="successMessage hidden">
+                                  <span class="successText">To je pravilno: "Vidva/Vidve sta"</span>
+                                  <button data-action="tryAgain">Še enkrat!</button> 
+                                </div>
+                                <div class="checkForm">
+                                    <input placeholder="Onadva/Onidve">
+                                    <button data-action="checkPresentPositive">Preveri!</button>
+                                  </div>
+                                 <div class="successMessage hidden">
+                                    <span class="successText">To je pravilno: "Onadva/Onidve sta"</span>
+                                    <button data-action="tryAgain">Še enkrat!</button> 
+                                  </div>
+                                  <div class="checkForm">
+                                      <input placeholder="Mi/Me">
+                                      <button data-action="checkPresentPositive">Preveri!</button>
+                                    </div>
+                                   <div class="successMessage hidden">
+                                      <span class="successText">To je pravilno: "Mi/Me smo"</span>
+                                      <button data-action="tryAgain">Še enkrat!</button> 
+                                    </div>
+                                    <div class="checkForm">
+                                        <input placeholder="Vi/Ve">
+                                        <button data-action="checkPresentPositive">Preveri!</button>
+                                      </div>
+                                     <div class="successMessage hidden">
+                                        <span class="successText">To je pravilno: "Vi/Ve ste"</span>
+                                        <button data-action="tryAgain">Še enkrat!</button> 
+                                      </div>
+                                      <div class="checkForm">
+                                          <input placeholder="Oni/One">
+                                          <button data-action="checkPresentPositive">Preveri!</button>
+                                        </div>
+                                       <div class="successMessage hidden">
+                                          <span class="successText">To je pravilno: "Oni/One so"</span>
+                                          <button data-action="tryAgain">Še enkrat!</button> 
+                                        </div>
+                                </div>
+                              </div>
+                      </th>
+                    <!-- <th id="column2">
+                        <div class="tabTitle">Nikalna poved</div>
+                        <div class="checkForm">
+                          <input placeholder="Jaz">
+                          <button data-action="checkPresentNegative">Preveri!</button>
+                        </div>
+                        <div class="checkForm">
+                            <input placeholder="Ti">
+                            <button data-action="checkPresentNegative">Preveri!</button>
+                          </div>
+                          <div class="checkForm">
+                              <input placeholder="On/Ona/Ono">
+                              <button data-action="checkPresentNegative">Preveri!</button>
+                            </div>
+                            <div class="checkForm">
+                                <input placeholder="Midva/Midve">
+                                <button data-action="checkPresentNegative">Preveri!</button>
+                              </div>
+                              <div class="checkForm">
+                                  <input placeholder="Vidva/Vidve">
+                                  <button data-action="checkPresentNegative">Preveri!</button>
+                                </div>
+                                <div class="checkForm">
+                                    <input placeholder="Onadva/Onidve">
+                                    <button data-action="checkPresentNegative">Preveri!</button>
+                                  </div>
+                                  <div class="checkForm">
+                                      <input placeholder="Mi/Me">
+                                      <button data-action="checkPresentNegative">Preveri!</button>
+                                    </div>
+                                    <div class="checkForm">
+                                        <input placeholder="Vi/Ve">
+                                        <button data-action="checkPresentNegative">Preveri!</button>
+                                      </div>
+                                      <div class="checkForm">
+                                          <input placeholder="Oni/One">
+                                          <button data-action="checkPresentNegative">Preveri!</button>
+                                        </div>
+                                </div> 
+                      </th>
+                  </tr> -->
+                </table>
+              </div> 
+          <div data-mode="past" class="hidden">
+              Tab 2
+          </div>
+          <div data-mode="future" class="hidden">
+          Tab 3
+          </div>
+        </div>
+      </div>
+</section>
+            <footer class="footer">
+              <div class="socialMedia">
+                  <a href="#">Sledeti nam na družabnih omrežjih</a>
+                  <a id="fb" href="#" target="_blank"></a>
+                  <a id="vk" href="#" target="_blank"></a>
+                  <a id="insta" href="#" target="_blank"></a>
+              </div>
+            </footer>
+          <script type="module" src="../src/modules/word/toBeForms.js"></script>
+        </body>
+      </html>
+      

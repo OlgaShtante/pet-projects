@@ -1,0 +1,61 @@
+.left {
+  float: left !important;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+}
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.header {
+  width: 100%;
+  background: #5ec7d4;
+}
+
+.header .brand h3 {
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  margin: 1.35rem 0;
+  line-height: 1;
+  font-size: 1.5rem;
+}
+
+.header .brand h3 a {
+  font-size: 36px;
+  color: #fff;
+}
+
+.header .brand h3 a:hover {
+  color: #dcf394;
+}
+
+.menu {
+  float: right;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu ul li {
+  float: left;
+}
+
+.menu ul li a {
+  margin: 1.73rem 0 1.73rem 2rem;
+  display: block;
+  color: #fff;
+  line-height: 1;
+  font-size: 22px;
+  font: bold;
+}
