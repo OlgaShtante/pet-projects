@@ -1,0 +1,9 @@
+GET http://localhost:3000/tobe/1
+
+###
+
+PUT http://localhost:3000/tobe/tense
+Content-Type: application/json
+{
+    "test":"test"
+}

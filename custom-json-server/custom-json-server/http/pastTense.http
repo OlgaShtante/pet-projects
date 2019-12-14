@@ -1,0 +1,34 @@
+GET http://localhost:3000/tobe
+
+###
+
+GET http://localhost:3000/tobe/tense
+
+###
+
+POST http://localhost:3000/tobe/tense
+Content-Type: application/json
+{
+    "test":"test"
+}
+
+###
+
+POST http://localhost:3000/tobe/tense
+Content-Type: application/json
+{
+    "test":"test"
+}
+
+###
+
+PUT http://localhost:3000/tobe/4
+Content-Type: application/json
+{
+    "test":"test"
+}
+
+###
+
+DELETE http://localhost:3000/tobe/4
+Content-Type: application/json
