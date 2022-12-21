@@ -1,0 +1,43 @@
+body {
+  background-color: #a3d5d3;
+  font-size: 24px;
+  text-align: center;
+}
+
+form {
+  font-size: 24px;
+  font-family: "Comic Sans MS";
+  color: #003333;
+}
+
+input {
+  height: 40px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Comic Sans MS";
+  color: #003333;
+}
+
+input::placeholder {
+  font-weight: 100;
+  color: lightgrey;
+}
+
+button {
+  height: 80px;
+  width: 130px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Comic Sans MS";
+  background: #00cccc;
+  border: 3px solid #008080;
+  color: #003333;
+  text-shadow: 0.5px 0.5px 0.5 #003333;
+  border-radius: 10px;
+}
+
+hr {
+  margin-bottom: 50px;
+}
